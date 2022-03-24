@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+
+import { memo } from 'react';
 import './App.css';
+import Board from './Components/Board/Board'
+
+
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className="bg-gray-800 flex items-center justify-center py-4">
+        <h1 className="font-bold text-white text-2xl">DleWor</h1>
       </header>
+      <main className="min-h-screen flex items-center justify-center bg-gray-700">
+        <Board  />
+      </main>
     </div>
   );
 }
 
-export default App;
+export default memo(App);
